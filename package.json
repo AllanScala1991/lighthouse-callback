@@ -1,0 +1,14 @@
+{
+  "name": "lighthouse-callback",
+  "version": "1.0.0",
+  "main": "dist/lighthouse.service.js",
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "rm -rf ./dist",
+    "build": "tsc --build"
+  },
+  "devDependencies": {
+    "cypress-audit": "^1.0.0",
+    "typescript": "^4.3.5"
+  }
+}
