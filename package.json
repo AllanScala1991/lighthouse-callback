@@ -1,13 +1,13 @@
 {
   "name": "lighthouse-callback",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "dist/lighthouse.service.js",
   "license": "MIT",
   "scripts": {
     "prebuild": "rm -rf ./dist",
     "build": "tsc --build",
     "prepare": "yarn run build",
-    "version": "git add -a src",
+    "version": "git add .",
     "postversion": "git push && git push --tags"
   },
   "devDependencies": {
