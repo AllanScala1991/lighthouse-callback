@@ -101,6 +101,6 @@ export class lighthouseCallback {
   }
 
   convertScore(val) {
-    return val * 100;;
+    return parseInt(`${val * 100}`);
   }
 }
