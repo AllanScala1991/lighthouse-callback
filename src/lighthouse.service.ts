@@ -11,14 +11,13 @@ export class lighthouseCallback {
     printer.group('SCORE POINTS', 1);
     Object.keys(obj).forEach((key) => {
       const scorePoints = this.convertScore(obj[key].score);
-      const scoreFixed = parseInt(scorePoints.toFixed(0))
       printer.title(`${obj[key].title} - `);
-      if (scoreFixed < 50) {
-        printer.danger(scoreFixed, 1);
-      } else if (scoreFixed >= 50 && scoreFixed < 90){
-        printer.warning(scoreFixed, 1);
+      if (scorePoints < 50) {
+        printer.danger(scorePoints, 1);
+      } else if (scorePoints >= 50 && scorePoints < 90){
+        printer.warning(scorePoints, 1);
       } else {
-        printer.success(scoreFixed, 1);
+        printer.success(scorePoints, 1);
       }
     });
     printer.print();
@@ -102,6 +101,6 @@ export class lighthouseCallback {
   }
 
   convertScore(val) {
-    return val * 100;
+    return parseInt(`${val * 100}`);
   }
 }
